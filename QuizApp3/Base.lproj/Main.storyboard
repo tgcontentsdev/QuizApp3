@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuizApp3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qes.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3w5-PP-3S9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第１問" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoS-cV-tmA">
+                                <rect key="frame" x="116.5" y="148" width="87" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="平成26年10月時点での日本の人口は、男性より女性の方が多い？" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d62-Qq-wA9">
+                                <rect key="frame" x="0.0" y="194" width="320" height="145"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="gjN-Iw-CH4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjr-Ok-Hy7">
+                                <rect key="frame" x="20" y="423" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="5ib-Sp-Ka7"/>
+                                    <constraint firstAttribute="width" constant="120" id="6Sd-oP-7FO"/>
+                                </constraints>
+                                <state key="normal" image="maru.jpeg"/>
+                                <connections>
+                                    <action selector="maruButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ghw-Xe-4qV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3N-nw-b6M">
+                                <rect key="frame" x="180" y="423" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="KmW-hf-jhD"/>
+                                    <constraint firstAttribute="width" constant="120" id="u5W-1a-N8h"/>
+                                </constraints>
+                                <state key="normal" image="batsu.png"/>
+                                <connections>
+                                    <action selector="batsuButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nqu-f0-H4W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sod-47-WEO">
+                                <rect key="frame" x="40" y="439" width="240" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="もう１回">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="oneMoreAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZhF-Zv-mCT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tjr-Ok-Hy7" secondAttribute="bottom" constant="25" id="65j-sI-WHV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3w5-PP-3S9" secondAttribute="bottom" constant="440" id="96y-Ac-5oL"/>
+                            <constraint firstItem="g3N-nw-b6M" firstAttribute="height" secondItem="tjr-Ok-Hy7" secondAttribute="height" id="FeH-TC-1zm"/>
+                            <constraint firstItem="DoS-cV-tmA" firstAttribute="top" secondItem="3w5-PP-3S9" secondAttribute="bottom" constant="20" id="G0p-xD-9JN"/>
+                            <constraint firstAttribute="trailing" secondItem="g3N-nw-b6M" secondAttribute="trailing" constant="20" id="JDt-b2-oIU"/>
+                            <constraint firstItem="d62-Qq-wA9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KdQ-AI-TIY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sod-47-WEO" secondAttribute="bottom" constant="45" id="NFh-aR-cac"/>
+                            <constraint firstItem="tjr-Ok-Hy7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="W0S-5Z-03g"/>
+                            <constraint firstItem="g3N-nw-b6M" firstAttribute="width" secondItem="tjr-Ok-Hy7" secondAttribute="width" id="Y6c-9y-7Sl"/>
+                            <constraint firstItem="d62-Qq-wA9" firstAttribute="top" secondItem="DoS-cV-tmA" secondAttribute="bottom" constant="20" id="fgd-pM-c5Q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g3N-nw-b6M" secondAttribute="bottom" constant="25" id="i79-OW-8hs"/>
+                            <constraint firstItem="3w5-PP-3S9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jJV-O8-9jg"/>
+                            <constraint firstAttribute="trailing" secondItem="3w5-PP-3S9" secondAttribute="trailing" id="jjt-IK-wis"/>
+                            <constraint firstItem="Sod-47-WEO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ktc-DZ-9TQ"/>
+                            <constraint firstItem="DoS-cV-tmA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="omm-ln-5Op"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d62-Qq-wA9" secondAttribute="bottom" constant="229" id="tsj-a2-8OX"/>
+                            <constraint firstItem="3w5-PP-3S9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zbW-ax-FPt"/>
+                            <constraint firstAttribute="trailing" secondItem="d62-Qq-wA9" secondAttribute="trailing" id="zc9-o2-na8"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="backImage" destination="3w5-PP-3S9" id="8qF-bR-2Ph"/>
+                        <outlet property="batsuButton" destination="g3N-nw-b6M" id="bUC-eS-DHB"/>
+                        <outlet property="maruButton" destination="tjr-Ok-Hy7" id="WbD-PC-eto"/>
+                        <outlet property="onemoreButton" destination="Sod-47-WEO" id="pzs-jR-ixE"/>
+                        <outlet property="qesLavel" destination="DoS-cV-tmA" id="qGi-Xk-wzw"/>
+                        <outlet property="qesText" destination="d62-Qq-wA9" id="v7w-c5-bFq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="337"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="batsu.png" width="540" height="540"/>
+        <image name="maru.jpeg" width="225" height="225"/>
+        <image name="qes.jpg" width="300" height="284"/>
+    </resources>
+</document>
